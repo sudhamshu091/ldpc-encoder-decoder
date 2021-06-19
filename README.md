@@ -1,8 +1,8 @@
 # ldpc-encoder-decoder
-[Encoding and Decoding](images/decoder.jpg)
-![Encoding and Decoding](images/decoder.jpg)
-[Encoder](images/encoder.jpg)
-![Encoder](images/encoder.jpg)
+[Encoding and Decoding](images/encoder.jpg)
+![Encoding and Decoding](images/encoder.jpg)<br>
+[Decoder](images/decoder.jpg)
+![Decoder](images/decoder.jpg)
 - In information theory, a Low-Density Parity-Check (LDPC) code is a linear error correcting code, a method of transmitting a message over a noisy transmission channel.<br>
 - An LDPC is constructed using a sparse Tanner graph (subclass of the bipartite graph). LDPC codes are capacity-approaching codes, which means that practical constructions exist that allow the noise threshold to be set very close to the theoretical maximum (the Shannon limit) for a symmetric memoryless channel.<br> 
 - The noise threshold defines an upper bound for the channel noise, up to which the probability of lost information can be made as small as desired.<br> Using iterative belief propagation techniques, LDPC codes can be decoded in time linear to their block length. LDPC codes are finding increasing use in applications requiring reliable and highly efficient information transfer over bandwidth-constrained or return-channel-constrained links in the presence of corrupting noise. LDPC (Low Density Parity Check) is used for PDSCH and PUSCH.<br> 
