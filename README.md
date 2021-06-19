@@ -12,4 +12,5 @@
 Today LDPC are used for 10GBASET Ethernet, which sends 10 gigabits per second over twisted pair cables, LDPC are a part of WiFi 802.11, 802.11n and 802.11ac in High Throughput (HT) PHY specification in 5G. 
 - LDPC codes, with iterative decoding, have been shown to achieve excellent performance over many channels, nearly approaching capacity on additive white Gaussian noise (AWGN) channel, and as code's length tends to infinity, achieving it on the binary erasure channel (BEC). 
 - In this project as a continuation of the CRC project from the 5th sem, we are trying to implement LDPC encoding or decoding.
-
+![Decoder](images/decoder.jpg)
+![Encoder](images/encoder.jpg)
