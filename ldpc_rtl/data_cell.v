@@ -1,4 +1,4 @@
-module data_cell(
+module data_cell( 
     clk,
     reset_n,
     fsm,
