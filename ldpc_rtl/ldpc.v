@@ -1,17 +1,5 @@
 //Module
-module ldpc(
-    clk,
-    reset_n,
-    data_in,
-    sync_in,
-    rate,
-    max_iter,
-    
-    data_out,
-    sync_out,
-    busy,
-    num_iter
-);
+module ldpc(clk,reset_n,data_in,sync_in,rate,max_iter,data_out,sync_out,busy,num_iter);
 
 //Parameter
 parameter D_WID = 8;
