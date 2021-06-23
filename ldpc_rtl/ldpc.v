@@ -1,11 +1,9 @@
-//Module
 module ldpc(clk,reset_n,data_in,sync_in,rate,max_iter,data_out,sync_out,busy,num_iter);
 
-//Parameter
+
 parameter D_WID = 8;
 parameter A_WID = 8;
 
-//Input ports
 input                 clk        ;
 input                 reset_n    ;
 input                 rate       ; // 0, 1/2 1, 3/4
