@@ -8,13 +8,7 @@ ldpc ldpc(CLOCK_50,KEY[0],SW[5:0],KEY[1],KEY[2],5'b00111,LEDR[9],LEDR[8],LEDR[7]
 endmodule
 
 `timescale 1 ns / 1 ps
-module addr_gen(
-    clk,
-    reset_n,
-    fsm,
-    cycle,
-    rate,
-    sync_in,
+module addr_gen(clk,reset_n,fsm,cycle,rate,sync_in,
     wr_lq,
     wr_lr,
     rd_lq,
