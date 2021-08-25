@@ -1,4 +1,4 @@
-function [R iter]=ldpc_decode(llr,SNR,H,coderate,col_order)
+%function [R iter]=ldpc_decode_fix(llr,SNR,H,coderate,col_order)
 %function [R iter]=ldpc_decode(llr,SNR,H,coderate,col_order);
 %llr : log-like ratio
 %SNR : SNR value estimation
@@ -7,8 +7,13 @@ function [R iter]=ldpc_decode(llr,SNR,H,coderate,col_order)
 %R   : decoder result
 %ber : bit error rate
 
+% llr width
+% llr_width = 5;
+load sim.mat
+load llr.mat
+
 iter_num = 20;
-alpha = 0.6;
+alpha = 0.625;
 ber = 0;
 if coderate == 0.5
     row_weight = 6;
@@ -52,6 +57,8 @@ end
 for i =1:256
     for j =1:36
         seq_ram(j,i) = llr(36*(i-1)+j);
+%         temp = floor(llr(36*(i-1)+j)*2^llr_width;
+%	 seq_ram(j,i) = temp;
     end
 end
 
@@ -137,8 +144,8 @@ for iter = 1:iter_num
                     less_lq = abs(lqij(k));
                 end
             end
-            min_lq = alpha * min_lq;
-            less_lq = alpha * less_lq;
+            min_lq = round(alpha * min_lq);
+            less_lq = round(alpha * less_lq);
             compresslr(j,i,1) = min_lq;
             compresslr(j,i,2) = less_lq;
             compresslr(j,i,3) = loc_lq;

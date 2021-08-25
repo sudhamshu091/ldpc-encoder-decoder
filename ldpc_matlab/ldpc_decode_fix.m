@@ -1,4 +1,4 @@
-function [R iter]=ldpc_decode(llr,SNR,H,coderate,col_order)
+function [R iter]=ldpc_decode_fix(llr,SNR,H,coderate,col_order)
 %function [R iter]=ldpc_decode(llr,SNR,H,coderate,col_order);
 %llr : log-like ratio
 %SNR : SNR value estimation
@@ -6,6 +6,9 @@ function [R iter]=ldpc_decode(llr,SNR,H,coderate,col_order)
 %col_order : Reranged Column Order
 %R   : decoder result
 %ber : bit error rate
+
+% llr width
+llr_width = 5;
 
 iter_num = 20;
 alpha = 0.6;
@@ -51,7 +54,9 @@ end
 % initilize seq_ram
 for i =1:256
     for j =1:36
-        seq_ram(j,i) = llr(36*(i-1)+j);
+%        seq_ram(j,i) = llr(36*(i-1)+j);
+         temp = floor(llr(36*(i-1)+j)*2^llr_width;
+	 seq_ram(j,i) = temp;
     end
 end
 
